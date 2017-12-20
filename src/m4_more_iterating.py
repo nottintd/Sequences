@@ -412,7 +412,7 @@ def count_items_bigger_than(numbers, threshold):
 def run_test_count_positive_sines():
     """ Tests the   count_positive_sines   function. """
     # ------------------------------------------------------------------
-    # TODO: 6. Implement this TEST function.
+    # DONE: 6. Implement this TEST function.
     #   It TESTS the  count_positive_sines  function defined below.
     #   Include at least ** 1 ** ADDITIONAL test beyond what we supplied.
     #
@@ -544,7 +544,7 @@ def count_positive_sines(numbers):
             total = total + 1
     return total
     # ------------------------------------------------------------------
-    # TODO: 7. Implement and test this function.
+    # DONE: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # ------------------------------------------------------------------
 
@@ -552,7 +552,7 @@ def count_positive_sines(numbers):
 def run_test_sum_first_n():
     """ Tests the   sum_first_n   function. """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement this TEST function.
+    # DONE: 8. Implement this TEST function.
     #   It TESTS the  sum_first_n  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests.
     #
@@ -622,7 +622,19 @@ def run_test_sum_first_n():
     print('       actual:  ', actual)
 
     # TO DO 8 (continued):  Add your 2 ADDITIONAL tests here:
+    # Test 8:
+    expected = 1126
+    actual = sum_first_n([18, -30, 780, 55, 303, 3284, 423, 0, 1321], 5)
+    print()
+    print('Test 8 expected:', expected)
+    print('       actual:  ', actual)
 
+    # Test 9:
+    expected = 408456
+    actual = sum_first_n([4328, 32498, 4329, 487, 32498, 324988, 9238, 92, 92, -234], 7)
+    print()
+    print('Test 9 expected:', expected)
+    print('       actual:  ', actual)
 
 def sum_first_n(numbers, n):
     """
@@ -645,8 +657,12 @@ def sum_first_n(numbers, n):
       :type numbers:   list of tuple (of numbers)
       :type n: int
     """
+    total = 0
+    for k in range(n):
+        total = total + numbers[k]
+    return total
     # ------------------------------------------------------------------
-    # TODO: 9. Implement and test this function.
+    # DONE: 9. Implement and test this function.
     #          Tests have been written for you (above).
     #
     # RESTRICTION:
